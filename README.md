@@ -152,8 +152,8 @@ Run the zbuildcopy.sh script to generate bin files and automatically copy them t
 <h3>Issues/To Be Implemented</h3>
 
 There's some flickering and ghosting effects in the LED panel that are yet to be fixed.
-I'm planning to interface a speaker set using I2S or DAC so that the audio can play while the spectrum analyzer is running.
-Also planning to read audio directly from an ADC interface.
+I'm planning to interface a speaker set using I2S or DAC so that the audio can play while the spectrum analyzer is running (For the demo video above, I edited the audio into the video)
+I'm also planning to read audio directly from an ADC interface.
 
 <h3>Downloads</h3>
 
