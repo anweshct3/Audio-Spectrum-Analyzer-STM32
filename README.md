@@ -157,9 +157,7 @@ Also planning to read audio directly from an ADC interface.
 
 <h3>Downloads</h3>
 
-The RGB file used for testing: https://drive.google.com/file/d/1naavXjKioFAy7kV9V69ojJpQR5Z7ykuu/view?usp=sharing
-
-The MJPEG file used for testing: https://drive.google.com/file/d/1dNoX6LIpb77QD0pMJv0v4orD502aLdtR/view?usp=sharing
+Custom audio tones of different frequencies, sound level and duration can be generated using this tool: https://www.audiocheck.net/audiofrequencysignalgenerator_sinetone.php
 
 <h3>Acknowledgements</h3>
 
