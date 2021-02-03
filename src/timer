@@ -1,0 +1,7 @@
+/* prescaler = 90,000,000/900 = 100,000
+Wave file = 88620.435233161 bytes per second
+8192 bytes = 4096 words in 0.092439176 seconds = 92.44 ms
+4096 bytes = 2048 words in 0.046219588 seconds = 46.22 ms
+100000 ticks in 1 second, 1000 ms
+100 ticks in 1 ms
+4622 ticks in 46.22ms */
