@@ -149,11 +149,11 @@ Run the zbuildcopy.sh script to generate bin files and automatically copy them t
 
 
 
-<h3>Performance Analysis</h3>
+<h3>Issues/To Be Implemented</h3>
 
-SPI has limited bandwidth of about 0.5 - 1 MBps and the size of the uncompressed video file was about 40 MB and hence the framerate is really slow. (First image above)
-
-After integrating a JPEG decoder to read compressed/MJPEG video files instead, the framerate improved, but is still far from perfect. Since STM32F446RE's SRAM is only 128 KB, it wasn't enough to process a 320x240 MJPEG video, which would have needed 150 KB of SRAM instead. So the video was resized to 240x180. (Second image above)
+There's some flickering and ghosting effects in the LED panel that are yet to be fixed.
+I'm planning to interface a speaker set using I2S or DAC so that the audio can play while the spectrum analyzer is running.
+Also planning to read audio directly from an ADC interface.
 
 <h3>Downloads</h3>
 
@@ -163,5 +163,6 @@ The MJPEG file used for testing: https://drive.google.com/file/d/1dNoX6LIpb77QD0
 
 <h3>Acknowledgements</h3>
 
-This project uses the Tiny JPEG Decompressor and the FatFs - Generic FAT Filesystem Module libraries from ChaN.
+Since there's no hardware reference manual for this LED matrix, I had to port the code written by Adafruit (for the Arduino platform) to Libopencm3. I only ported the sections that were enough for my project. Adafruit's library is available here: https://github.com/adafruit/RGB-matrix-Panel
 
+This project uses the Tiny JPEG Decompressor and the FatFs - Generic FAT Filesystem Module libraries from ChaN.
