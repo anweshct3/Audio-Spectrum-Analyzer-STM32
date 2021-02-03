@@ -6,7 +6,7 @@ This project uses the inbuilt DSP capabilities of the Cortex M4F CPU to calculat
 
 I have uploaded a demo of my project to Youtube, check it out here: https://youtu.be/9FIgD8RN5yE
 
-[![IMAGE ALT TEXT HERE](![output](https://user-images.githubusercontent.com/7463848/106691030-17fea000-65d3-11eb-9f09-0406d67e1159.gif))](https://www.youtube.com/watch?v=9FIgD8RN5yE)
+[(https://user-images.githubusercontent.com/7463848/106691030-17fea000-65d3-11eb-9f09-0406d67e1159.gif)](https://www.youtube.com/watch?v=9FIgD8RN5yE)
 
 
 <h3>Software Requirements</h3>
