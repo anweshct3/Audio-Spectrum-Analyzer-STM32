@@ -163,4 +163,4 @@ Custom audio tones of different frequencies, sound level and duration can be gen
 
 Since there's no hardware reference manual for this LED matrix, I had to port the code written by Adafruit (for the Arduino platform) to Libopencm3. I only ported the sections that were enough for my project. Adafruit's library is available here: https://github.com/adafruit/RGB-matrix-Panel
 
-This project uses the Tiny JPEG Decompressor and the FatFs - Generic FAT Filesystem Module libraries from ChaN.
+This project uses the FatFs - Generic FAT Filesystem Module library from ChaN.
