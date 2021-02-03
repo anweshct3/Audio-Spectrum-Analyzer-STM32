@@ -1,6 +1,6 @@
 <h3>Introduction</h3>
 
-This project uses the inbuilt DSP capabilities of the Cortex M4F CPU to calculate the FFT of audio data from an uncompressed/WAVE audio fule and illustrate the intensity of the frequencies in an RGB LED matrix panel.
+This project uses the inbuilt DSP capabilities of the Cortex M4F CPU to calculate the FFT of audio data from an uncompressed/WAVE audio file and illustrate the intensity of the frequencies in an RGB LED matrix panel.
 
 <h3>Video</h3>
 
@@ -19,7 +19,7 @@ I have uploaded a demo of my project to Youtube, check it out here:
 
 <h3>Hardware Requirements</h3>
 
-1. A TFT-LCD screen using an ILI9341 driver. This project uses the LCD Screen made bby ITEAD Studio: https://www.itead.cc/wiki/ITDB02-2.8_V1.0
+1. An RGB LED panel. The one used in this project can be obtained from Adafruit: https://www.adafruit.com/product/420
 
 2. A microSD card reader. This project uses the one by Sparkfun: https://www.sparkfun.com/products/544
 
@@ -27,13 +27,11 @@ I have uploaded a demo of my project to Youtube, check it out here:
 
 <h3>Important Files list</h3>
 
-1. src/videoplay.c - Written almost entirely by me; Contains the intialisation functions for the GPIO pins, the TFT LCD screen, the microSD card reader. Also contains the functions to render images and videos on the screen. 
+1. src/rgb3216.c - Written almost entirely by me; Contains the intialisation functions for the GPIO pins, the RGB panel and, the microSD card reader. Also contains a timer to control the RGB panel and all the FFT functions needed to calculate the FFT of the audio data.
 
 2. chanfiles/diskio.c - Contains the application layer for invoking the FatFs APIs, for reading and writing data from the microSD card. I ported the example code provided by Mbed to libopencm3 ( https://os.mbed.com/cookbook/SD-Card-File-System)
 
 3. chanfiles - The other files in this folder contain the open-source FatFs driver from ChaN (http://elm-chan.org/fsw/ff/00index_e.html)
-
-4. decode/tjpgd.c - The JPEG decoder, taken from Tiny JPEG Decompressor by ChaN (http://elm-chan.org/fsw/tjpgd/00index.html) Was slightly modified by me to make it compatible with this project.
 
 
 <h3>Building and Compilation</h3>
@@ -42,7 +40,7 @@ Run make on the root folder to build the entire project, including the src files
 
 If changes have done to the files in the src folder, run the zbuildsd.sh script to build only the src files
 
-Run the ycopysd.h script to generate bin files and automatically copy them to the STM32F4 microcontroller
+Run the zbuildcopy.sh script to generate bin files and automatically copy them to the STM32F4 microcontroller
 
 <h3>Pin-Mapping</h3>
 
@@ -89,70 +87,58 @@ Run the ycopysd.h script to generate bin files and automatically copy them to th
 <table>
 <thead>
   <tr>
-    <th>TFT-LCD</th>
+    <th>RGB LED Matrix</th>
     <th>STM32F4</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>LED</td>
-    <td>3v3</td>
-  </tr>
-  <tr>
-    <td>RST</td>
-    <td>B7</td>
-  </tr>
-  <tr>
-    <td>CS</td>
-    <td>B6</td>
-  </tr>
-  <tr>
-    <td>DB15</td>
-    <td>C7</td>
-  </tr>
-  <tr>
-    <td>DB14</td>
-    <td>C6</td>
-  </tr>
-  <tr>
-    <td>DB13</td>
-    <td>C5</td>
-  </tr>
-  <tr>
-    <td>DB12</td>
-    <td>C4</td>
-  </tr>
-  <tr>
-    <td>DB11</td>
-    <td>C3</td>
-  </tr>
-  <tr>
-    <td>DB10</td>
-    <td>C2</td>
-  </tr>
-  <tr>
-    <td>DB9</td>
-    <td>C1</td>
-  </tr>
-  <tr>
-    <td>DB8</td>
+    <td>R1</td>
     <td>C0</td>
   </tr>
   <tr>
-    <td>RD</td>
-    <td>B0</td>
+    <td>G1</td>
+    <td>C1</td>
   </tr>
   <tr>
-    <td>WR</td>
+    <td>B1</td>
+    <td>C2</td>
+  </tr>
+  <tr>
+    <td>R2</td>
+    <td>C3</td>
+  </tr>
+  <tr>
+    <td>G2</td>
+    <td>C4</td>
+  </tr>
+  <tr>
+    <td>B2</td>
+    <td>C5</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>C6</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>C7</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>C8</td>
+  </tr>
+  <tr>
+    <td>CLK</td>
     <td>B1</td>
   </tr>
   <tr>
-    <td>RS</td>
-    <td>B5</td>
+    <td>STB</td>
+    <td>B2</td>
   </tr>
   <tr>
-    <td>VCC</td>
-    <td>5V</td>
+    <td>OE</td>
+    <td>B12</td>
   </tr>
   <tr>
     <td>GND</td>
