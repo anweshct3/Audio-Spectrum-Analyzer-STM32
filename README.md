@@ -87,7 +87,8 @@ Run the zbuildcopy.sh script to generate bin files and automatically copy them t
 <table>
 <thead>
   <tr>
-    <th>RGB LED Matrix</th>
+    <th>RGB LED 
+      Matrix</th>
     <th>STM32F4</th>
   </tr>
 </thead>
