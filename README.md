@@ -1,6 +1,6 @@
 <h3>Introduction</h3>
 
-This project uses the inbuilt DSP capabilities of the Cortex M4F CPU to calculate the FFT of audio data from an uncompressed/WAVE audio file and illustrate the intensity of the frequencies in an RGB LED matrix panel.
+This project uses the inbuilt DSP capabilities of the Cortex M4F CPU to calculate the FFT of audio data from an uncompressed/WAVE audio file and illustrate the intensity of different frequency bands in an RGB LED matrix panel.
 
 <h3>Video</h3>
 
@@ -32,6 +32,8 @@ I have uploaded a demo of my project to Youtube, check it out here: https://yout
 2. chanfiles/diskio.c - Contains the application layer for invoking the FatFs APIs, for reading and writing data from the microSD card. I ported the example code provided by Mbed to libopencm3 ( https://os.mbed.com/cookbook/SD-Card-File-System)
 
 3. chanfiles - The other files in this folder contain the open-source FatFs driver from ChaN (http://elm-chan.org/fsw/ff/00index_e.html)
+
+4. Include - This folder contains the header files of ARM's CMSIS DSP library, taken from here: https://github.com/ARM-software/CMSIS/tree/master/CMSIS/Include
 
 
 <h3>Building and Compilation</h3>
