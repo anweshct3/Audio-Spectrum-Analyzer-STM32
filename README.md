@@ -29,11 +29,13 @@ I have uploaded a demo of my project to Youtube, check it out here: https://yout
 
 1. src/rgb3216.c - Written almost entirely by me; Contains the intialisation functions for the GPIO pins, the RGB panel and, the microSD card reader. Also contains a timer to control the RGB panel and all the FFT functions needed to calculate the FFT of the audio data.
 
-2. chanfiles/diskio.c - Contains the application layer for invoking the FatFs APIs, for reading and writing data from the microSD card. I ported the example code provided by Mbed to libopencm3 ( https://os.mbed.com/cookbook/SD-Card-File-System)
+2. MATLAB - The folder contains a sample MATLAB code to generate a Blackmann-Harris window function which can be applied to the audio data before the FFT operation for more accurate results (https://en.wikipedia.org/wiki/Window_function)
 
-3. chanfiles - The other files in this folder contain the open-source FatFs driver from ChaN (http://elm-chan.org/fsw/ff/00index_e.html)
+3. chanfiles/diskio.c - Contains the application layer for invoking the FatFs APIs, for reading and writing data from the microSD card. I ported the example code provided by Mbed to libopencm3 ( https://os.mbed.com/cookbook/SD-Card-File-System)
 
-4. Include - This folder contains the header files of ARM's CMSIS DSP library, taken from here: https://github.com/ARM-software/CMSIS/tree/master/CMSIS/Include
+4. chanfiles - The other files in this folder contain the open-source FatFs driver from ChaN (http://elm-chan.org/fsw/ff/00index_e.html)
+
+5. Include - This folder contains the header files of ARM's CMSIS DSP library, taken from here: https://github.com/ARM-software/CMSIS/tree/master/CMSIS/Include
 
 
 <h3>Building and Compilation</h3>
