@@ -29,7 +29,7 @@ I have uploaded a demo of my project to Youtube, check it out here: https://yout
 
 1. src/rgb3216.c - Written almost entirely by me; Contains the intialisation functions for the GPIO pins, the RGB panel and, the microSD card reader. Also contains a timer to control the RGB panel and all the FFT functions needed to calculate the FFT of the audio data.
 
-2. MATLAB - The folder contains a sample MATLAB code to generate a Blackmann-Harris window function which can be applied to the audio data before the FFT operation for more accurate results (https://en.wikipedia.org/wiki/Window_function)
+2. MATLAB - The folder contains a sample MATLAB code to generate a Blackmann-Harris window which can be applied to the audio data before the FFT operation for more accurate results (https://en.wikipedia.org/wiki/Window_function). Folder also contains a sample WAV audio of frequency 1690Hz and sampling rate 48 Khz to test the MATLAB code with. 
 
 3. chanfiles/diskio.c - Contains the application layer for invoking the FatFs APIs, for reading and writing data from the microSD card. I ported the example code provided by Mbed to libopencm3 ( https://os.mbed.com/cookbook/SD-Card-File-System)
 
