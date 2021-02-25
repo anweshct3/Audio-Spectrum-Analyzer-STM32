@@ -4,7 +4,7 @@ This project uses the inbuilt DSP capabilities of the Cortex M4F CPU to calculat
 
 <h3>Video</h3>
 
-I have uploaded a demo of my project to Youtube, check it out here: https://youtu.be/4DzAvy2ceKA
+I have uploaded a demo of my project to Youtube, check it out here: https://youtu.be/9FIgD8RN5yE
 
 ![output](https://user-images.githubusercontent.com/7463848/106691030-17fea000-65d3-11eb-9f09-0406d67e1159.gif)
 
