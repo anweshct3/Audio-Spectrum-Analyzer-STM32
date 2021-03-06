@@ -13,7 +13,7 @@ I have uploaded a demo of my project to Youtube, check it out here: https://yout
 
 1. GCC-ARM toolchain (Preferably installed in /opt/ directory)
 
-2. Libopencm3 Library - Libopencm3 is an low-level, open-source library for STM32 development. The libopencm3 folder in this repository is a heavily trimmed version of the original containing the required files needed to compile code only for the STM32F4 platform. But the latest libopencm3 can be obtained from https://github.com/libopencm3/libopencm3
+2. Libopencm3 Library - Libopencm3 is a low-level, open-source library for STM32 development. The libopencm3 folder in this repository is a heavily trimmed version of the original containing the required files needed to compile code only for the STM32F4 platform. But the latest libopencm3 can be obtained from https://github.com/libopencm3/libopencm3
 
 3. ST-Linkv2 for flashing binary files to the microcontroller (https://freeelectron.ro/installing-st-link-v2-to-flash-stm32-targets-on-linux/)
 
