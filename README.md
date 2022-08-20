@@ -48,7 +48,7 @@ Run the zbuildcopy.sh script to generate bin files and automatically copy them t
 
 <h3>Pin-Mapping</h3>
 
-<table style="float:right;" border=5>
+<table style="width:30%;display:inline-block">
 <thead>
   <tr>
     <th>MicroSD <br>Reader</th>
