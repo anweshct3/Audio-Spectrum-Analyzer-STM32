@@ -42,7 +42,7 @@ I have uploaded a demo of my project to Youtube, check it out here: https://yout
 
 Run make on the root folder to build the entire project, including the src files and the libopencm3 library
 
-If changes have done to the files in the src folder, run the zbuildsd.sh script to build only the src files
+If changes are done to the files in the src folder, run the zbuildsd.sh script to build only the src files
 
 Run the zbuildcopy.sh script to generate bin files and automatically copy them to the STM32F4 microcontroller
 
@@ -155,7 +155,7 @@ Run the zbuildcopy.sh script to generate bin files and automatically copy them t
 
 <h3>Issues/To Be Implemented</h3>
 
-There's some flickering and ghosting effects in the LED panel that are yet to be fixed.
+There are some flickering and ghosting effects in the LED panel that are yet to be fixed.
 I'm planning to interface a speaker set using I2S or DAC so that the audio can play while the spectrum analyzer is running (For the demo video above, I edited the audio into the video)
 I'm also planning to read audio directly from an ADC interface.
 
